@@ -1,0 +1,39 @@
+<div *ngFor="let match of matches">
+    <div class="teams">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src={{match.flag1}} height = "200px" width="400px" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{match.nameOne}}</h5>
+            </div>
+          </div>
+          <div class="vs">
+            <h1 style="font-size: 75px">
+              VS
+            </h1>
+          </div>
+          <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src={{match.flag2}} height = "200px" width="400px" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{match.nameTwo}}</h5>
+              </div>
+            </div>
+    </div>
+    
+    
+    <div class="card">
+      <h5 class="card-header">Live Score</h5>
+      <div class="card-body">
+          <ul class="list-group">
+              <li class="list-group-item list-group-item-success score">  
+                <p class="list-group-item list-group-item-warning team-name">
+                    {{match.nameOne}} vs {{match.nameTwo}}    
+                </p> 
+                <p class="list-group-item list-group-item-primary">
+                    Score: {{match.run}}/{{match.wicket}} ( {{match.over}} overs )
+                </p>
+                
+              </li> 
+            </ul>
+      </div>
+    </div>
+</div>
